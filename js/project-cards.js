@@ -38,7 +38,7 @@ const projects = [
 - Added a file upload and download feature using **chunks-based file transfer**
 - Added functionality to control the microphone and speakers of client’s computer
         `,
-        demoLink: "https://github.com/chiragsoni81245/Reverse-Shell"
+        githubLink: "https://github.com/chiragsoni81245/Reverse-Shell"
     },
     {
         title: "Blog Web App",
@@ -50,7 +50,7 @@ const projects = [
 - Added feature to follow other users and build my feed page to see posts from all the followings
 - Added feature to explore the latest post from all the users on the explore page
         `,
-        demoLink: "https://github.com/chiragsoni81245/Microblog"
+        githubLink: "https://github.com/chiragsoni81245/Microblog"
     },
     {
         title: "Tree Traversal Visualizer",
@@ -84,8 +84,8 @@ function createProjectCard(project) {
     const cardFront = document.createElement("div");
     cardFront.classList.add("card-front");
     cardFront.innerHTML = `
-        <div class="flex flex-col w-full h-full bg-transparent">
-            <h3 class="text-xl font-semibold mb-1">${project.title}</h3>
+        <div class="flex flex-col h-full bg-transparent">
+            <h3 class="text-xl justify-between font-semibold mb-1">${project.title}</h3>
             ${project.subtitle ? `<h3 class="front-semibold mb-2">${project.subtitle}</h3>` : ''}
             <img class="h-full" src="img/${project.image}" alt="${project.title}">
         </div>
@@ -100,7 +100,10 @@ function createProjectCard(project) {
         <div class="px-5 pb-5">${descriptionHtml}</div>
     `;
 
-    if (project.demoLink !== '#') {
+    if (project.githubLink && project.githubLink !== '#') {
+        cardBack.innerHTML = cardBack.innerHTML + `<a href="${project.githubLink}" class="text-blue-500 hover:underline">Github</a>`
+    }
+    if (project.demoLink && project.demoLink !== '#') {
         cardBack.innerHTML = cardBack.innerHTML + `<a href="${project.demoLink}" class="text-blue-500 hover:underline">View Demo</a>`
     }
 
