@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chirag Soni</title>
+  <link href="css/styles0.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body class="bg-gray-100 font-sans">
+  <!-- Navbar -->
+  <nav class="w-full fixed top-0 z-50" id="navbar">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <a href="#" class="text-white text-3xl font-bold">Chirag Soni</a>
+
+      <!-- Hamburger Button -->
+      <button id="menuToggle" class="lg:hidden">
+        <div class="menu-icon">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+      </button>
+
+
+      <div id="navbarMenu" class="hidden lg:block space-x-4">
+        <a href="#about" class="text-white nav-link">About</a>
+        <a href="#software" class="text-white nav-link">Projects</a>
+
+        <a href="#" id="resume-button"
+          class="bg-slate-600 hover:bg-slate-400 text-white font-bold py-2 px-4 rounded">
+          Resume/CV
+        </a>
+      </div>
+    </div>
+
+    <!-- Full-screen Mobile Menu -->
+    <div id="mobileMenu"
+      class="hidden absolute top-full right-0 mr-2 mt-2 bg-white shadow-lg border rounded w-56 lg:hidden">
+      <!-- Mobile menu items here. Example: -->
+      <a href="#about" class="block text-gray-800 py-3 px-5 hover:bg-gray-100">About</a>
+      <a href="#software" class="block text-gray-800 py-3 px-5 hover:bg-gray-100">Projects</a>
+      <a href="#" class="block text-gray-800 py-3 px-5 hover:bg-gray-100">Resume/CV</a>
+    </div>
+
+  </nav>
+
+
+
+  <!-- Splash Page -->
+  <header id='splash' class="h-screen flex flex-col justify-center items-center gradient-swipe text-white text-center">
+    <h1 class="text-6xl font-bold mb-2">Chirag Soni</h1>
+        <p class="text-3xl mb-2">Developing resilient software solutions for web and mobile platforms</p>
+    <div class="absolute bottom-8 w-full text-center">
+      <button id="scrollToNext"
+        class="bg-transparent p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-400">
+        <i class="fas fa-chevron-down"></i>
+      </button>
+    </div>
+
+  </header>
+
+  <div class="px-10 xl:px-40 2xl:px-72 bg-white">
+    <!-- Introduction Section -->
+    <section id="about" class="pt-32 bg-white flex items-center">
+      <div
+        class="container mx-auto flex flex-col lg:flex-row space-y-12 lg:space-y-0 lg:space-x-12 items-center justify-center">
+        <div class="lg:w-2/5">
+          <!-- Profile Picture -->
+          <img src="img/my_pic.jpg" alt="Chirag Soni" class="w-full rounded-lg">
+
+          <!-- Social Media Icons (You may need external libraries or SVGs for the icons) -->
+          <div class="flex justify-center space-x-8 mt-2">
+            <a href="https://www.linkedin.com/in/chiragsoni812" class="hover:text-blue-700 text-xl"><i
+                class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com/chiragsoni_tw" class="hover:text-blue-500 text-xl"><i
+                class="fab fa-twitter"></i></a>
+            <a href="https://github.com/chiragsoni81245" class="hover:text-gray-500 text-xl"><i
+                class="fab fa-github"></i></a>
+
+          </div>
+        </div>
+
+        <!-- Description -->
+        <div id="description" class="lg:w-3/5">
+          <h2 class="text-4xl font-bold">About Me</h2>
+          <div class="flex flex-col space-y-4">
+
+            <p class="text-gray-600 text-lg pt-4">
+            I'm a seasoned full-stack developer known for designing robust database architectures and key features like <b>Rule Engines</b> and <b>Dynamic Product Pricing</b>, I've successfully delivered scalable systems, including a <b>Bidding System</b> and <b>QSR Mobile applications using React Native</b> also have the experience of <b>Leading a team of 6 developers</b> working over multiple projects.
+            </p>
+            <p class="text-gray-600 text-lg">
+            My expertise extends to <b>Integrating Payment gateways/machines</b>, <b>Optimizing SQL queries</b> for performance, and architecture database for services like <b>Learning Management System</b> and <b>Real-Time Notification</b> platforms. I've also played a pivotal role in developing Rest API Services, showcasing proficiency in technologies like React, React Native, Node, Flask, FastAPI, PostgreSQL, AWS, and Redis. With a passion for creating efficient and impactful solutions, I bring a unique blend of technical skills and leadership experience to every project.
+            </p>
+            <p class="text-gray-600 text-lg">
+              Some hobbies that I have include, Building IoT and robotics projects. Drones are something which excites me a lot, I have also mentored colleagues and discussed new technologies.
+            </p>
+          </div>
+
+          <a href="#"
+            class="mt-4 inline-block py-2 px-6 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition">Resume/CV</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Software I've Built -->
+    <section id="software" class="pt-24 bg-white">
+      <div class="container mx-auto">
+        <h2 class="text-4xl font-bold">Software I’ve Built</h2>
+        <hr class='w-32 border-2 border-blue-500 my-5'>
+        <!-- Gallery View -->
+        <div id="projectContainer" class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Software Project Cards will be dynamically added here -->
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-blue-500 text-white text-center py-4">
+    &copy; 2024 Chirag Soni
+  </footer>
+
+  <script src="js/scripts.js"></script>
+  <script src="js/project-cards.js"></script>
+
+</body>
+
+</html>
+
