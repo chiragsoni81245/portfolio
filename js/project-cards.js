@@ -53,6 +53,16 @@ const projects = [
         githubLink: "https://github.com/chiragsoni81245/Microblog"
     },
     {
+        title: "Decentralized Meet",
+        image: "decentralized_meet_demo.jpeg",
+        descriptionMarkdown: `
+- Its a web app based on WebRTC, where multiple users can connect to each other with video and audio sharing
+- No Server Required, means it does not require any other 3rd party in between you can also run this HTML file into your local browser and use this app, so that comunication will always be peer to peer
+        `,
+        demoLink: "https://chiragsoni81245.github.io/decentralized-meet/",
+        githubLink: "https://github.com/chiragsoni81245/decentralized-meet"
+    },
+    {
         title: "Tree Traversal Visualizer",
         image: "tree-visualizer-demo.jpeg",
         descriptionMarkdown: `
